@@ -1,0 +1,139 @@
+# Build directories
+build/
+out/
+debug/
+release/
+x64/
+Win32/
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+*.cmake
+!CMakeLists.txt
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Intel oneAPI
+.cache/
+.config/
+.local/
+
+# CUDA
+*.cu.obj
+*.cubin
+*.fatbin
+*.ptx
+
+# Neural Network files
+*.nnue
+*.pt
+*.weights
+*.bin
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+temp/
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependencies
+lib/
+external/
+third_party/
+
+# Documentation generated
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Test files
+test_results/
+coverage/
+
+# Environment and configuration
+.env
+config.local.json
+settings.local.json
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+*.smod
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+
+# Project specific
+chess_database/
+opening_book/
+endgame_tablebase/
+learned_patterns/
+*.position
+*.game
