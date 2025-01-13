@@ -128,7 +128,7 @@
 ### 2. Build Process
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ultrachess-ai.git
+git clone https://github.com/janebluee/Chess-Engine-Artificial-Intelligence.git
 
 # Create build directory
 mkdir build && cd build
@@ -201,7 +201,6 @@ This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) fo
 
 <div align="center">
 
-**Made with ❤️ by [Your Team Name]**
 
 [⬆ Back to top](#ultrachess-ai-engine)
 
