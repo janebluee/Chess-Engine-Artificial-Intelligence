@@ -1,20 +1,15 @@
 #pragma once
 
+#include <cstdint>
 #include <array>
-#include <memory>
-#include "../neural/network.hpp"
+#include "../board/board.hpp"
 
 class Evaluator {
 public:
-    Evaluator(std::shared_ptr<NeuralNetwork> nn);
+    Evaluator() = default;
+    ~Evaluator() = default;
     
-    int evaluate(const std::array<uint64_t, 12>& pieces,
-                uint64_t occupied,
-                int side,
-                int gamePhase);
-                
-    void updateAccumulator(int piece, int square, bool add);
-    void resetAccumulator();
+    int evaluate(const std::array<uint64_t, 12>& pieces, uint64_t occupied, int sideToMove);
     
 private:
     static constexpr int PAWN_VALUE = 100;
@@ -23,14 +18,9 @@ private:
     static constexpr int ROOK_VALUE = 500;
     static constexpr int QUEEN_VALUE = 900;
     
-    std::shared_ptr<NeuralNetwork> network;
-    
-    std::array<float, NeuralNetwork::INPUT_SIZE> extractFeatures(
-        const std::array<uint64_t, 12>& pieces,
-        uint64_t occupied,
-        int side
-    );
-    
-    int calculateMaterialScore(const std::array<uint64_t, 12>& pieces);
-    int calculatePositionalScore(float nnOutput, int gamePhase);
+    int evaluateMaterial(const std::array<uint64_t, 12>& pieces);
+    int evaluatePosition(const std::array<uint64_t, 12>& pieces);
+    int evaluatePawnStructure(const std::array<uint64_t, 12>& pieces);
+    int evaluateMobility(const std::array<uint64_t, 12>& pieces, uint64_t occupied);
+    int evaluateKingSafety(const std::array<uint64_t, 12>& pieces, uint64_t occupied);
 };
